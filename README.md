@@ -1,5 +1,3 @@
-# Jobbee Jobs Board Application
-
 Follow me on [Twitter](http://www.twitter.com/websteravosa).
 
 ## Getting started
