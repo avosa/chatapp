@@ -26,5 +26,5 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails s
 ```
 
-For more information, contact me on
+For more information, contact me
 [_Webster Avosa_](http://www.twitter.com/websteravosa).
