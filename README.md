@@ -1,9 +1,6 @@
 # Jobbee Jobs Board Application
 
-This is a work in progress web application
-[*Jobbee:
-Not So Typical Job Site*]
-by [Ajmal Nabil](http://www.twitter.com/ajmalnjamal).
+Follow me on [Twitter](http://www.twitter.com/websteravosa).
 
 ## Getting started
 
@@ -32,4 +29,4 @@ $ rails s
 ```
 
 For more information, contact me on
-[*Twitter*](http://www.twitter.com/ajmalnjamal).
+[_Webster Avosa_](http://www.twitter.com/websteravosa).
