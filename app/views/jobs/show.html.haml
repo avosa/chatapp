@@ -1,0 +1,10 @@
+.jobs-wrapper.row
+  = render 'job', job: @job
+  - if @job.user.id == current_user.id
+    .text-center.edit-links
+      = link_to "Cancel", jobs_path
+      |
+      = link_to "Edit Job", edit_job_path(@job)
+  - else
+    .text-center.edit-links
+      =link_to "Cancel", jobs_path

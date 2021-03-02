@@ -1,0 +1,2 @@
+$("#like_<%= @job.id %>").removeClass('glyphicon-heart-empty').addClass('glyphicon-heart');
+$("#likes_<%= @job.id %>").html("<%= j (render partial: 'jobs/likes', locals: { job: @job} ) %>");

@@ -1,0 +1,8 @@
+.form-wrapper
+  = simple_form_for @job, html: { class: 'form-horizontal', multipart: true } do |job|
+    .form-group
+      = job.input :image
+    .form-group.text-center
+      = job.input :title
+    .form-group.text-center
+      = job.button :submit, class: 'btn-success'

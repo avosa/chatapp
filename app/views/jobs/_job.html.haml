@@ -1,0 +1,31 @@
+.jobs-wrapper
+  .job
+    .job-head
+      .thumb-img
+      .user-name
+        = link_to job.user.user_name, profile_path(job.user.user_name)
+      .time-ago
+        = time_ago_in_words job.created_at
+    .image.center-block
+      = link_to (image_tag job.image.url(:medium), class:'img-responsive'), job_path(job)
+    .job-bottom
+      = render 'jobs/likes', job: job
+      .title
+        .title-content
+          .user-name
+            = link_to job.user.user_name, profile_path(job.user.user_name)
+          = job.title
+        .comments{id: "comments_#{job.id}"}
+          - if job.comments.any?
+            .paginator{id: "#comments-paginator-#{job.id}"}
+              - unless job.comments.count <= 3
+                = link_to "view all #{job.comments.count} comments", job_comments_path(job), remote: true, class: 'more-comments', data: {job_id: "#{job.id}", type: "html"}
+            = render job.comments.last(3), job: job
+    .comment-like-form.row
+      .like-button.col-sm-1
+        =link_to '', like_job_path(job.id), remote: true,
+                                              id: "like_#{job.id}",
+                                              class: "glyphicon #{liked_job job}"
+      .comment-form.col-sm-11
+        =form_for([job, job.comments.build], remote: true) do |f|
+          = f.text_field :content, placeholder: 'Add a comment.', class: "comment_content", id: "comment_content_#{job.id}"

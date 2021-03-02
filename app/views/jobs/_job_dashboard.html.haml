@@ -1,0 +1,5 @@
+#jobs
+  = render 'jobs'
+
+#paginator.text-center
+  = link_to_next_page @jobs, 'SEE MORE', remote: true, id: 'load_more'
